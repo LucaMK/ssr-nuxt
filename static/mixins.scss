@@ -1,0 +1,187 @@
+/*首页竖屏公用样式  start*/
+@mixin homeCommon($imgUrl){
+  width: 100%;
+  // height: calc(100% - 80px);
+  background: url($imgUrl) center center no-repeat;
+  background-size: 100% 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 0 0;
+  .center-body{
+    >h3{
+      font-size: 36px;
+    }
+    >p{
+      font-size: 16px;
+    }
+  }
+}
+/*首页竖屏公用样式  end*/
+
+/*头部nav传变量变颜色    start*/
+@mixin navColor($color){
+  .nav-mid{
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    position: relative;
+    >li{
+      margin: 0 20px;
+      display: flex;
+      user-select: none;
+      .item-con{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        >.router-link-active{
+          .bottom-border{
+            width: 100%;
+            background: $color;
+          }
+          &:hover{
+            .bottom-border{
+              width: 100%;
+              background: $color;
+              animation: bottomMove 0s;
+            }
+            @keyframes bottomMoveA {
+              100%{
+                width: 100%;
+                opacity: 1
+              }
+            }
+          }
+        }
+        >a,span{
+          width: 100%;
+          color: $color;
+          font-size: 18px;
+          display: flex;
+          align-items: center;
+          transition: all 0.1s;
+          border-radius: 2px;
+          >em{
+            display: block;
+            margin: 0 0 0 4px;
+            transition: all 0.5s;
+          }
+        }
+        >a{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          .bottom-border{
+            height: 3px;
+            bottom:-10px;
+            border-radius: 17px;
+            position: relative;
+          }
+          &:hover{
+            .bottom-border{
+              width: 100%;
+              background: $color;
+              animation: bottomMove 0.7s;
+            }
+            @keyframes bottomMove {
+              0%{
+                width: 10%;
+                opacity: 0;
+              }
+              100%{
+                width: 100%;
+                opacity: 1;
+              }
+            }
+          }
+        }
+        .child-con{
+          position: absolute;
+          top: 100%;
+          visibility: hidden;
+          >em{
+            display: block;
+            transform:rotate(180deg);
+            position: relative;
+            top: 5px;
+            color: white;
+          }
+          .dialog-con{
+            background: white;
+            padding:10px 32px;
+            box-shadow: 0 3px 20px 0 rgba(121, 129, 218, 0.3);
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            >a{
+              white-space: nowrap;
+              padding: 10px 0;
+              color: #333;
+              font-size: 18px;
+              &:hover{
+                color: #787dda;
+              }
+            }
+          }
+        }
+        &:hover{
+          .child-con{
+            visibility: visible;
+          }
+        }
+      }
+      &:hover{
+        cursor: pointer;
+        .item-con{
+          >span{
+            >em{
+              transform:rotate(180deg);
+            }
+          }
+        }
+      }
+    }
+  }
+  .nav-right{
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    color: $color;
+    .scan-phone{
+      display: flex;
+      align-items: center;
+      >em{
+        font-size: 22px;
+        position: relative;
+        top: 2px;
+      }
+      >span{
+        margin: 0 0 0 4px;
+        font-size: 18px;
+      }
+    }
+    >b{
+      height: 40px;
+      width: 1px;
+      margin: 0 20px;
+      background: $color;
+    }
+    .common-btn{
+      padding: 6px 10px;
+      font-size: 18px;
+      border-radius: 5px;
+      margin: 0 10px 0 0;
+      &:hover{
+        cursor: pointer;
+        opacity: 0.8;
+      }
+    }
+    .common-btn:last-child{
+      margin: 0;
+    }
+  }
+}
+/*头部nav传变量变颜色    end*/

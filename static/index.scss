@@ -1,0 +1,75 @@
+@import "./variable";
+@import "./mixins";
+/*==========样式初始化  start==========*/
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, input, textarea, th, td { margin:0; padding:0; }
+h1, h2, h3, h4, h5, h6{ font-size:100%; }
+address, cite, dfn, em, var { font-style:normal; }
+code, kbd, pre, samp { font-family:couriernew, courier, monospace; }
+small{ font-size:12px; }
+ul, ol,li { list-style:none; }
+a { text-decoration:none; }
+a:hover { text-decoration:none; }
+sup { vertical-align:text-top; }
+sub{ vertical-align:text-bottom; }
+legend { color:#000; }
+fieldset, img { border:0; }
+button, input, select, textarea { font-size:100%; outline:none;}
+table { border-collapse:collapse; border-spacing:0; }
+img{border: none;display: block;}
+/*==========样式初始化  end==========*/
+
+/*==========iconfont start==========*/
+@font-face {
+  font-family: 'iconfont';  /* project id 564575 */
+  src: url('//at.alicdn.com/t/font_564575_rpo5zn2v9xq.eot');
+  src: url('//at.alicdn.com/t/font_564575_rpo5zn2v9xq.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_564575_rpo5zn2v9xq.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_564575_rpo5zn2v9xq.woff') format('woff'),
+  url('//at.alicdn.com/t/font_564575_rpo5zn2v9xq.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_564575_rpo5zn2v9xq.svg#iconfont') format('svg');
+}
+
+.iconfont{
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+/*==========iconfont end==========*/
+
+html,body{
+  color: #333333;
+  font-size: 13px;
+  min-width: 1200px;
+  min-height: 610px;
+  height: 100%;
+  font-family: 'Source Han Sans', 'Microsoft YaHei','Avenir', Helvetica, Arial, sans-serif;
+}
+
+/*swiper分页器样式  start*/
+ .colour-Page .swiper-pagination-bullet{
+  background: #7981da;
+  display: flex;
+  flex-direction: column;
+  margin: 6px 0;
+}
+.colour-Page .swiper-pagination-bullet-active{
+  width: 8px;
+  height: 24px;
+  border-radius: 5px;
+  background: #7981da;
+}
+.son-pagination .swiper-pagination-bullet{
+  background: white;
+  margin: 0 6px;
+}
+
+.son-pagination .swiper-pagination-bullet-active{
+  width: 24px;
+  height: 8px;
+  border-radius: 5px;
+  background: white;
+}
+/*swiper分页器样式  end*/
