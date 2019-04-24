@@ -67,9 +67,6 @@ export default {
   /**
    * server port 配置
    */
-  server: {
-    port: 80, // default: 3000
-  },
 
   proxy:{
     '/v3': {

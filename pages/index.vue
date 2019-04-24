@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <p>{{isClient}}</p>
     <aside-nav></aside-nav>
     <no-ssr>
       <home-page></home-page>
@@ -15,9 +16,9 @@
     components:{footerBtm, asideNav, headNav, homePage},
     data(){
       return{
+        isClient: process.client ? 'true' : 'false'
       }
-    },
-
+    }
   }
 </script>
 

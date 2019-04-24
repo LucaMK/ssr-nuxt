@@ -4,7 +4,9 @@
       <div class="swiper-wrapper">
         <!--第一屏-->
         <div class="swiper-slide">
-          <slide-one></slide-one>
+          <no-ssr>
+            <slide-one></slide-one>
+          </no-ssr>
         </div>
         <!--第二屏-->
         <div class="swiper-slide" >
@@ -32,6 +34,7 @@
   </div>
 </template>
 <script>
+import {swiperAnimate, swiperAnimateCache} from '~/static/swiper/swiper.animate1.0.3.min.js';
   /* eslint-disable */
   import {mapState} from "vuex"
   import {slideOne, slideTwo, slideThree, slideFour, slideFive, slideSix} from "./components"
@@ -66,6 +69,7 @@
     },
 
     mounted(){
+      console.log();
       let _this = this;
       this.$store.commit("setNavColorV",false);      //假设变白
       console.log('this is server or client :', process.client, process.server)
