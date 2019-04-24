@@ -50,7 +50,7 @@
   </div>
 </template>
 <script>
-import {swiperAnimate, swiperAnimateCache} from '~/static/swiper/swiper.animate1.0.3.min.js';
+// import {swiperAnimate, swiperAnimateCache} from '~/static/swiper/swiper.animate1.0.3.min.js';
 
   /* eslint-disable */
   export default {
